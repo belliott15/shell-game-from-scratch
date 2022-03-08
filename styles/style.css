@@ -90,11 +90,31 @@ footer {
     box-shadow: var(--shadow);
 }
 
+.section2 {
+    column-span: all;
+}
+
 img {
     width: 90%;
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+}
+
+.monster::after {
+    content: '👹';
+    font-size: 8rem;
+    position: absolute;
+    display: flex;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 5px;
 }
 
