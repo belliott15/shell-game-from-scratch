@@ -9,7 +9,7 @@ const blueButton = document.getElementById('door3');
 
 const winsEl = document.getElementById('wins');
 const totalEl = document.getElementById('total');
-const lossEl = document.getElementById('total');
+const lossEl = document.getElementById('loss');
 
 // let state
 let winCount = 0;
@@ -19,21 +19,21 @@ greenButton.addEventListener('click', () =>{
 //get random door 
     let correctClick = randomHidingPlace();
 //enter handleGuess function
-    handleGuess('greenDoor', correctClick);
+    handleGuess('door1', correctClick);
 });
 
 pinkButton.addEventListener('click', () =>{
   //get random door 
     let correctClick = randomHidingPlace();
   //enter handleGuess function
-    handleGuess('pinkDoor', correctClick);
+    handleGuess('door2', correctClick);
 });
 
 blueButton.addEventListener('click', () =>{
     //get random door 
     let correctClick = randomHidingPlace();
     //enter handleGuess function
-    handleGuess('blueDoor', correctClick);
+    handleGuess('door3', correctClick);
 });
 
 //create function to reset doors after each click
@@ -58,7 +58,7 @@ function handleGuess(userClick, correctClick) {
   //increment total count after every click
     totalCount++;
   //increment win count after every correct click
-    if (userClick === correctClick) {
+    if (correctClick === userClick){
         winCount++;
     }
   // make a correct and incorrect door by randomizing the container
