@@ -6,6 +6,7 @@ const blueDoor = document.getElementById('door3-container');
 const greenButton = document.getElementById('door1');
 const pinkButton = document.getElementById('door2');
 const blueButton = document.getElementById('door3');
+const resetButton = document.getElementById('reset');
 
 const winsEl = document.getElementById('wins');
 const totalEl = document.getElementById('total');
@@ -36,11 +37,23 @@ blueButton.addEventListener('click', () =>{
     handleGuess('door3', correctClick);
 });
 
+resetButton.addEventListener('click', () =>{
+    resetStyles();
+    resetCounter();
+});
+
 //create function to reset doors after each click
 function resetStyles() {
     greenDoor.classList.remove('monster');
     pinkDoor.classList.remove('monster');
     blueDoor.classList.remove('monster');
+}
+
+//create reset counter
+function resetCounter() {
+    winsEl.textContent = 0;
+    totalEl.textContent = 0;
+    lossEl.textContent = 0;
 }
 
 //create array for hiding places

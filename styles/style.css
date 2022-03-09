@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@600&display=swap');
 body {
     /* feel free to update these css variables for a quick theme */
     
@@ -27,8 +28,8 @@ body {
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    font-family: 'Atma', sans-serif;
+    background-color: lightblue;
 }
 
 main {
@@ -40,7 +41,7 @@ main {
 }
 
 section {
-    background-color: var(--color5);
+    background-color: lightblue;
     max-width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -48,23 +49,24 @@ section {
     align-items: center;
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
+    margin-top: 0;
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    border: none;
 }
 
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: rgb(86, 128, 218);
     height: var(--header-height);
     box-shadow: var(--shadow);
 }
 
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: bold;
+    margin: 20px, 50px, 50px, 10px;
 }
 
 .gutter-right {
@@ -86,7 +88,7 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: rgb(86, 128, 218);
     box-shadow: var(--shadow);
 }
 
@@ -103,7 +105,8 @@ img {
 }
 
 .monster::after {
-    content: '👹';
+    content: url('/assets/Monster.png');
+    /* content: '👾'; */
     font-size: 8rem;
     position: absolute;
     display: flex;
@@ -115,7 +118,52 @@ div {
     align-items: center;
 }
 
+p{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
 button {
     margin: 5px;
+    font-family: 'Atma';
+    letter-spacing: 1px;
+}
+
+#door1 {
+    background-color: greenyellow;
+    border: inset green 3px;
+    border-radius: 100px;
+    color: black;
+    font-size: 20px;
+}
+
+#door2{
+    background-color: rgb(173, 114, 230);
+    border: inset rgb(98, 0, 128) 3px;
+    border-radius: 100px;
+    color: black;
+    font-size: 20px;
+}
+
+#door3{
+    background-color: rgb(114, 184, 230);
+    border: inset rgb(13, 0, 128) 3px;
+    border-radius: 100px;
+    color: black;
+    font-size: 20px;
+}
+
+#reset {
+    width: 400px;
+    background:rgb(106, 137, 224);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-span: all;
+    border-radius: 20px;
+    margin: 0;
+    font-size: 18px;
 }
 
