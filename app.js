@@ -51,9 +51,11 @@ function resetStyles() {
 
 //create reset counter
 function resetCounter() {
-    winsEl.textContent = 0;
-    totalEl.textContent = 0;
-    lossEl.textContent = 0;
+    winCount = 0;
+    totalCount = 0;
+    winsEl.textContent = winCount;
+    totalEl.textContent = totalCount;
+    lossEl.textContent = totalCount - winCount;
 }
 
 //create array for hiding places
@@ -61,7 +63,6 @@ const hidingPlace = ['door1', 'door2', 'door3'];
 
 function randomHidingPlace() {
     const random = Math.floor(Math.random() * hidingPlace.length);
-
     return hidingPlace[random];
 }
 

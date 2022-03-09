@@ -106,10 +106,8 @@ img {
 
 .monster::after {
     content: url('/assets/Monster.png');
-    /* content: '👾'; */
     font-size: 8rem;
     position: absolute;
-    display: flex;
 }
 
 div {
