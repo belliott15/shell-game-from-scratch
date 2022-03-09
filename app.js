@@ -7,6 +7,7 @@ const greenButton = document.getElementById('door1');
 const pinkButton = document.getElementById('door2');
 const blueButton = document.getElementById('door3');
 const resetButton = document.getElementById('reset');
+const tryAgainButton = document.getElementById('tryAgain');
 
 const winsEl = document.getElementById('wins');
 const totalEl = document.getElementById('total');
@@ -15,6 +16,8 @@ const lossEl = document.getElementById('loss');
 // let state
 let winCount = 0;
 let totalCount = 0;
+
+let playState = 0;
 // set event listeners 
 greenButton.addEventListener('click', () =>{
 //get random door 
@@ -40,6 +43,11 @@ blueButton.addEventListener('click', () =>{
 resetButton.addEventListener('click', () =>{
     resetStyles();
     resetCounter();
+});
+
+tryAgainButton.addEventListener('click', () =>{
+    resetStyles();
+    playState.textContent = 0;
 });
 
 //create function to reset doors after each click
