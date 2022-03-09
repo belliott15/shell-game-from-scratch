@@ -7,7 +7,7 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 ## Making a plan
 
 1) **Make a drawing of your app. Simple "wireframes"**
-
+![wireframe for shell game app](/assets/Wireframe.png "wireframe for shell game app")
 1) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
   -body: header (templated), main- h2, section1- div(img1, button), div(img2, button), div(img3, button), section2 -div(wins, losses, total), section3 - any other stretch goals as needed.
 1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
